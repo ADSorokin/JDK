@@ -1,0 +1,5 @@
+Petrovich: Привет!
+Ivan: Привет
+Ivan: Как дела?
+Petrovich: Просто отлично
+Ivan : Привет!
