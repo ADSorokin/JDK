@@ -4,3 +4,5 @@
 Петя: Как дела?
 Ivan IPetro: Привет
 Ivan Ivanovich: Привет
+Ivan Ivanovich: Как жизнь?
+Петя: Отлично
