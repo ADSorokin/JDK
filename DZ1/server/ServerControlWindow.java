@@ -10,7 +10,7 @@ public class ServerControlWindow extends JFrame {
     final private JTextArea logArea;
     public static final int WIDTH = 400;
     public static final int HEIGHT = 300;
-    public static final String LOG_PATH = "DZ1/server/logfile.txt";
+    public static final String LOG_PATH = "src/server/logfile.txt";
     private boolean isServerWorking = false;
     ArrayList<ChatClient> clientList = new ArrayList<>();
 
