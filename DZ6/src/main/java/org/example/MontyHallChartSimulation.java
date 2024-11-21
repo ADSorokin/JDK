@@ -45,10 +45,11 @@ public class MontyHallChartSimulation {
         }
     }
 
-    public enum StepResult{
-        STAY,
-        SWITCH
-    };
+    public enum StepResult {
+        STAY, SWITCH
+    }
+
+    ;
 
     public static void main(String[] args) {
 
@@ -86,11 +87,11 @@ public class MontyHallChartSimulation {
 
 
             if (playerChoice == prizeDoor) {
-                results.put(i,StepResult.STAY);
+                results.put(i, StepResult.STAY);
                 stayWins++;
             }
             if (switchChoice == prizeDoor) {
-                results.put(i,StepResult.SWITCH);
+                results.put(i, StepResult.SWITCH);
                 switchWins++;
             }
 
