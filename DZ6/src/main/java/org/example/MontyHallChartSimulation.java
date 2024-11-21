@@ -23,9 +23,12 @@ import org.jfree.data.general.DefaultPieDataset;
 import javax.swing.*;
 import java.awt.*;
 import java.text.DecimalFormat;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class MontyHallChartSimulation {
+
 
     @Data
     static class Result {
@@ -42,7 +45,13 @@ public class MontyHallChartSimulation {
         }
     }
 
+    public enum StepResult{
+        STAY,
+        SWITCH
+    };
+
     public static void main(String[] args) {
+
         int totalGames = 1000;
         Result result = simulateGames(totalGames);
         DecimalFormat decimalFormat = new DecimalFormat("#.###");
@@ -57,6 +66,7 @@ public class MontyHallChartSimulation {
     }
 
     public static Result simulateGames(int totalGames) {
+        Map<Integer, Enum> results = new HashMap<>();
         Random random = new Random();
         int stayWins = 0;
         int switchWins = 0;
@@ -76,11 +86,14 @@ public class MontyHallChartSimulation {
 
 
             if (playerChoice == prizeDoor) {
+                results.put(i,StepResult.STAY);
                 stayWins++;
             }
             if (switchChoice == prizeDoor) {
+                results.put(i,StepResult.SWITCH);
                 switchWins++;
             }
+
         }
 
         Result result = new Result();
